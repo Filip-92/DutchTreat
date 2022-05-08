@@ -1,0 +1,26 @@
+$(document).ready(function () {
+
+    console.log("Hello");
+
+    var theForm = $("theForm");
+    theForm.hidden = true;
+
+    var button = $("buyButton");
+    button.on("click", function () {
+        alert("Buying item!")
+    });
+
+    var productInfo = $(".product-props li");
+    productInfo.on("click", function () {
+        console.log("You clicked on " + $(this).text());
+    });
+
+    var $loginToggle = $("loginToggle");
+    var $popupForm = $(".popup-form");
+
+    $loginToggle.on("click", function () {
+        $popupForm.slideToggle(1000);
+    });
+});
+
+
